@@ -1,5 +1,13 @@
 package com.java.connector;
 
+/**
+* Java Development Kit 11.0.4 LTS, Standard Edition.
+* Date: 29/07/2019, Time: 21:47:57.
+* Licenses: GNU GPL v3.0, Eclipse Public License 1.0, personal for non-commercial purposes.
+* Developer Contact: jtrejosb@live.com
+* GitHub.com/jtrejosb
+*/
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -28,11 +36,11 @@ public class Connector {
   public void connect() {
     try {
       Class.forName("com.mysql.cj.jdbc.Driver");
-      System.out.println("Connecting...");
+      System.out.println("Conectando...");
       CC=DriverManager.getConnection(url,usr,pwd);
-      System.out.println("Connected to MySQL localhost server");
+      System.out.println("Conectado a MySQL localhost server");
     } catch(Exception e) {
-      JOptionPane.showMessageDialog(null,e.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
+      JOptionPane.showMessageDialog(null,e.getMessage(),"Error Fatal!",JOptionPane.ERROR_MESSAGE);
       System.exit(0);
     }
   }
