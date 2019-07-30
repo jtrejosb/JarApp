@@ -1,0 +1,8 @@
+#!/bin/sh
+
+DIR=$1
+APP_JAR="DDBB.jar"
+APP_NAME="DDBB"
+
+cd "$DIR"
+java -Xdock:name="$APP_NAME" -Xdock:icon="$DIR/../Resources/database.icns" -cp "$DIR;.;" -jar "$DIR/$APP_JAR"
